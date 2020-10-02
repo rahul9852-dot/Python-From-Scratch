@@ -44,3 +44,16 @@ print("Total prime number in range :",c)
 
 t1=time.time()
 print("Time required :",t1-t0)
+
+# Method 2:
+'''We can optimise the algorithm to check whether number, say n, is a prime or not. In this method we will test all divisors from 2 to n/2.'''
+
+def is_prime(num):
+    for i in range(2, int(num/2)):
+        if num % i == 0:
+            return False
+    return True
+
+
+number = 110
+print(is_prime(number))
