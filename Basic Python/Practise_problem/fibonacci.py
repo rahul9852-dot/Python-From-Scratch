@@ -19,3 +19,25 @@ def fib(n):
             b=c
         return b
 print(fib(9))
+
+
+# Program to check either they are fibonacci or not
+
+import math
+
+def isperfect(x):
+    s=int(math.sqrt(x))
+    return s*s==x
+def isfibonacci(n):
+    
+    # n is fibonacci if one of (5*n*n+4) or (5*n*n-4)
+    # or both is perfectsquare
+
+    return isperfect(5*n*n+4) or isperfect(5*n*n-4)
+isfibonacci(8)
+for i in range(1,11):
+    if isfibonacci(i)==True:
+        print(i," is a fibonacci number.")
+    else:
+        print(i," is not a fibonacci number.")
+
